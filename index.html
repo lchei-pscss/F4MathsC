@@ -146,7 +146,72 @@
 
             <div class="card">
                 <h2>1.5 根與係數的關係 (Relation between Roots and Coefficients)</h2>
-                <p>設 $\alpha$ 及 $\beta$ 為二次方程 $ax^2 + bx + c = 0$ 的兩個根。我們不需真正解出 $\alpha$ 和 $\beta$，就能直接從方程的係數求得它們
+                <p>設 $\alpha$ 及 $\beta$ 為二次方程 $ax^2 + bx + c = 0$ 的兩個根。我們不需真正解出 $\alpha$ 和 $\beta$，就能直接從方程的係數求得它們的「和」與「積」：</p>
+                
+                <div class="formula">
+                    $$\text{二根之和 (Sum of Roots)}: \quad \alpha + \beta = -\frac{b}{a}$$
+                    $$\text{二根之積 (Product of Roots)}: \quad \alpha\beta = \frac{c}{a}$$
+                </div>
+
+                <h3>💡 DSE 必考熱門對稱代數式變形</h3>
+                <p>考試經常要求利用二根之和及二根之積來計算其他代數式，以下兩個公式必須熟背：</p>
+                <ul>
+                    <li><strong>平方和：</strong> $\alpha^2 + \beta^2 = (\alpha + \beta)^2 - 2\alpha\beta$</li>
+                    <li><strong>倒數和：</strong> $\frac{1}{\alpha} + \frac{1}{\beta} = \frac{\alpha + \beta}{\alpha\beta}$</li>
+                </ul>
+
+                <div class="example">
+                    <strong>📝 經典例題：</strong> 設 $\alpha$ 及 $\beta$ 為方程 $x^2 - 4x + 2 = 0$ 的兩根。求下列各式的值：<br>
+                    (a) $\alpha + \beta$ 及 $\alpha\beta$<br>
+                    (b) $\alpha^2 + \beta^2$<br>
+                    (c) $\frac{1}{\alpha} + \frac{1}{\beta}$
+                    <div class="step">
+                        <p><strong>解題步驟：</strong></p>
+                        <p>由方程可知：$a = 1, \ b = -4, \ c = 2$。</p>
+                        <p><strong>(a)</strong> 代入基本公式：</p>
+                        <p>$$\alpha + \beta = -\frac{-4}{1} = 4$$</p>
+                        <p>$$\alpha\beta = \frac{2}{1} = 2$$</p>
+                        
+                        <p><strong>(b)</strong> 利用平方和公式：</p>
+                        <p>$$\alpha^2 + \beta^2 = (\alpha + \beta)^2 - 2\alpha\beta$$</p>
+                        <p>$$\alpha^2 + \beta^2 = (4)^2 - 2(2) = 16 - 4 = 12$$</p>
+
+                        <p><strong>(c)</strong> 通分合併倒數和：</p>
+                        <p>$$\frac{1}{\alpha} + \frac{1}{\beta} = \frac{\alpha + \beta}{\alpha\beta} = \frac{4}{2} = 2$$</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>1.6 已知兩根構作二次方程 (Constructing a Quadratic Equation)</h2>
+                <p>如果我們已知一個二次方程的兩個根為 $\alpha$ 和 $\beta$，我們可以利用「二根之和」與「二根之積」來反推（構作）該二次方程。其一般式可寫成：</p>
+                
+                <div class="formula">
+                    $$x^2 - (\alpha + \beta)x + (\alpha\beta) = 0$$
+                </div>
+
+                <p>或者以文字表示：</p>
+                <div class="formula">
+                    $$x^2 - (\text{兩根之和})x + (\text{兩根之積}) = 0$$
+                </div>
+
+                <div class="example">
+                    <strong>📝 經典例題：</strong> 構作一個二次方程，使其兩根分別為 $3$ 和 $-5$。
+                    <div class="step">
+                        <p><strong>步驟 1：</strong> 計算兩根之和與兩根之積</p>
+                        <p>兩根之和 $\alpha + \beta = 3 + (-5) = -2$</p>
+                        <p>兩根之積 $\alpha\beta = (3)(-5) = -15$</p>
+                        
+                        <p><strong>步驟 2：</strong> 代入構作公式</p>
+                        <p>$$x^2 - (-2)x + (-15) = 0$$</p>
+                        
+                        <p><strong>答案：</strong> $x^2 + 2x - 15 = 0$</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div> 
 
         <div id="numbers-topic" class="tab-content">
             <div class="card">
