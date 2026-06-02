@@ -44,33 +44,6 @@
         .diagram-box canvas{background:#ffffff;border:1px solid #dee2e6;margin-top:8px;border-radius:4px;}
         .trig-graph{text-align:center;margin:15px 0;}
         .trig-graph canvas{background:#fff;border:1px solid #ccc;max-width:100%;border-radius:4px;}
-		/* ========== 新增：匯出 PDF (列印) 專用樣式 ========== */
-        @media print {
-            /* 隱藏上方分頁按鈕與匯出按鈕 */
-            .tab-container, .export-btn-container {
-                display: none !important;
-            }
-            /* 強制顯示所有分頁內容，無視原本的隱藏狀態 */
-            .tab-content {
-                display: block !important;
-            }
-            /* 調整卡片樣式以利列印：移除陰影、加上邊框、並盡量避免內容被切斷 */
-            .card {
-                box-shadow: none !important;
-                border: 1px solid #ccc !important;
-                page-break-inside: avoid;
-                margin-bottom: 20px;
-            }
-            /* 網頁背景設為白色 */
-            body {
-                background-color: #ffffff;
-            }
-            /* 確保畫布 (Canvas) 在 PDF 中能按比例縮放且不被切斷 */
-            canvas {
-                max-width: 100%;
-                page-break-inside: avoid;
-            }
-        }
     </style>
 </head>
 <body>
@@ -92,15 +65,10 @@
                 <button class="tab-btn" onclick="switchTab(event, 'equations-topic')">11. 續方程</button>
             </div>
         </div>
-		<div class="export-btn-container" style="margin-top: 15px;">
-                <button onclick="window.print()" style="background-color: #27ae60; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    🖨️ 匯出所有分頁成 PDF
-                </button>
-            </div>
     </header>
 
     <div class="container">
-		<div id="quadratic-topic" class="tab-content active">
+        <div id="quadratic-topic" class="tab-content active">
             <div class="card">
                 <h2>1.1 基本形式 (General Form)</h2>
                 <p>所有二次方程都可以寫成以下的一般式：</p>
@@ -241,19 +209,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="card calculator">
-                <h2>🧮 互動小工具：二次方程終極求根器</h2>
-                <p>輸入任何二次方程的係數，即時自動化簡並顯示實根或虛根：</p>
-                <div style="text-align: center; margin: 1.5rem 0;">
-                    <input type="number" id="input-a" placeholder="a" value="1"> <span>$x^2 \ +$</span>
-                    <input type="number" id="input-b" placeholder="b" value="-4"> <span>$x \ +$</span>
-                    <input type="number" id="input-c" placeholder="c" value="13"> <span>$= \ 0$</span>
-                    <br><br>
-                    <button onclick="solveQuadratic()">立即求解</button>
-                </div>
-                <div id="calc-result"></div>
-            </div>
+            
         </div>
 
         <div id="numbers-topic" class="tab-content">
